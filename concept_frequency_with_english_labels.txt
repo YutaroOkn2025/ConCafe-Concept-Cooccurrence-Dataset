@@ -40,21 +40,21 @@ concept	count	concept_Eng
 魔法少女	13	Magical girl
 音楽	13	Music
 王子	12	Prince
-学校	12	
-お人形	12	
+学校	12	School
+お人形	12	Oningyō (Doll)
 ボードゲーム	12	Board game
 オタク	12	Otaku
 隠れ家	12	Hideaway
 星	12	Star
 カジノ	11	Cashino
-ねこ	11	
+ねこ	11	Neko (Cat)
 JK	11	High school girl
 すっぴん	11	Natural look
 執事	10	Butler
 シスター	10	Nun
 ボーカロイド	10	Vocaloid
 ゴスロリ	10	Gothic lolita
-コスプレイヤー	10	
+コスプレイヤー	10	Cosplayer
 癒し	10	Healing
 地雷系	10	Jirai-kei fashion
 クラシカルメイド	9	Classical maid
@@ -123,7 +123,7 @@ JK	11	High school girl
 彼女	4	Girlfriend
 かっこいい	4	Cool
 競馬	4	Horse racing
-ゴースト	4	
+ゴースト	4	Ghost
 電脳	4	Cybernetic
 V系	4	Visual-kei
 貴族	4	Aristocrat
@@ -133,7 +133,7 @@ V系	4	Visual-kei
 ぽっちゃり	3	Chubby
 声優	3	Voice actor
 宮殿	3	Palace
-幽霊	3	Ghost
+幽霊	3	Yūrei (ghost)
 天空	3	Sky realm
 監獄	3	Prison
 ギルド	3	Guild
@@ -147,7 +147,7 @@ RPG	3	RPG
 容姿	3	Appearance
 特撮	3	Tokusatsu
 2.5次元	3	2.5D
-魔法学校	3	
+魔法学校	3	Magic school
 お屋敷	3	Mansion
 アットホーム	3	At-home atmosphere
 キョンシー	3	Jiangshi
@@ -177,7 +177,7 @@ e-Sports	2	eSports
 ガールズバー	2	Girls bar
 ネオン	2	Neon
 仮面	2	Mask
-警察	2	
+警察	2	Keisatsu (Police)
 花魁	2	Oiran
 あそび	2	Play
 お気に入り	2	Favorite
@@ -245,7 +245,7 @@ SF	1	Science fiction
 毒	1	Poison
 冬	1	Winter
 キャンプ	1	Camp
-オオカミ	1	
+オオカミ	1	Ookami (wolf)
 プラモデル	1	Plastic model
 雪	1	Snow
 白猫	1	White cat
