@@ -1,7 +1,9 @@
 # ConCafe-Concept-Cooccurrence-Dataset
 This repository contains concept cafe data for analyzing concept co-occurrence networks, community structures, regional patterns, and popularity distributions.
 <br>
+<br>
 This dataset contains original concept cafe data collected from Japanese concept cafes listed on the concept cafe information website (https://con-cafe.jp/). The data were collected in February 2026. Each row represents an individual concept cafe, including basic information about the cafe, its concept description, popularity indicators, location information, and a processed list of concepts used for concept co-occurrence analysis.
+<br>
 <br>
 cafeName：Name of the concept cafe
 <br>
