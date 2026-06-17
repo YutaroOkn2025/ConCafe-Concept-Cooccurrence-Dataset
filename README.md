@@ -5,6 +5,8 @@ This repository contains concept cafe data for analyzing concept co-occurrence n
 This dataset contains original concept cafe data collected from Japanese concept cafes listed on the concept cafe information website (https://con-cafe.jp/). The data were collected in February 2026. Each row represents an individual concept cafe, including basic information about the cafe, its concept description, popularity indicators, location information, and a processed list of concepts used for concept co-occurrence analysis.
 <br>
 <br>
+【concept_cafe_dataset.txt】
+<br>
 cafeName：Name of the concept cafe
 <br>
 orderByNew：Listing order on the data collection platform
