@@ -1,0 +1,256 @@
+concept	count	concept_Eng
+メイド	386	Maid
+アイドル	151	Idol
+かわいい	86	Kawaii
+アニソン	84	Anime song
+コスプレ	72	Cosplay
+猫	44	Cat
+悪魔	41	Demon
+アニメ	41	Anime
+お姫様	37	Princess
+天使	36	Angel
+イケメン	33	Handsome man
+男装	32	Male attire
+異世界	29	Another world
+妖精	29	Fairy
+ゴシック	28	Gothic
+サブカル	24	Subculture
+魔法	24	Magic
+猫耳	23	Cat ears
+シーシャ	23	Shisha
+ナース	23	Nurse
+チャイナ	23	Chinese style
+うさぎ	21	Rabbit
+和風	20	Japanese style
+アリス	19	Alice (in wonderland)
+バニー	19	Bunny girl
+美少女	19	Beautiful girl
+サイバー	18	Cyber
+動物	18	Animal
+学園	17	Academy
+ゲーム	17	Game
+小悪魔	17	Little Devil
+ドール	16	Doll
+サキュバス	16	Succubus
+制服	14	Casual Wear
+私服	14	Uniform
+韓国	13	Korean style
+顔ラン	13	Appearance ranking
+お菓子	13	Sweets
+魔法少女	13	Magical girl
+音楽	13	Music
+王子	12	Prince
+学校	12	
+お人形	12	
+ボードゲーム	12	Board game
+オタク	12	Otaku
+隠れ家	12	Hideaway
+星	12	Star
+カジノ	11	Cashino
+ねこ	11	
+JK	11	High school girl
+すっぴん	11	Natural look
+執事	10	Butler
+シスター	10	Nun
+ボーカロイド	10	Vocaloid
+ゴスロリ	10	Gothic lolita
+コスプレイヤー	10	
+癒し	10	Healing
+地雷系	10	Jirai-kei fashion
+クラシカルメイド	9	Classical maid
+ゆめかわいい	9	Yume-kawaii
+魔界	9	Demon realm
+病院	9	Hospital
+宇宙	9	Space
+ヴァンパイア	9	Vampire
+宝石	9	Jewelry
+育成型	9	Training-type
+スポーツ	9	Sports
+アミューズメント	8	Amusement
+夢	7	Dream
+女装	7	Female attire
+ラグジュアリー	7	Luxury
+着せ替え人形	7	Dress-up doll
+アメリカン	7	American style
+非日常	7	Extraordinary world
+清楚	7	Pure
+くま	7	Bear
+居酒屋	7	Izakaya
+お花	7	Flower
+近未来	7	Near future
+レトロ	6	Retro
+お城	6	Castle
+マリン	6	Marine
+正統派	6	Orthodox style
+個性派	6	Individualistic
+個性派メイド	6	Individualistic maid
+ナチュラル	6	Natural
+秘密基地	6	Secret base
+ロボット	6	Robot
+森	6	Forest
+高級感	6	High-class
+ロリ	6	Lolita
+月	6	Moon
+ギャル	6	Gyaru
+堕天使	6	Fallen angel
+巫女	6	Shrine maiden
+海	6	Sea
+酒クズ	6	Alcoholic character
+モデル	5	Model
+星空	5	Starry sky
+オンライン	5	Online
+マーメイド	5	Mermaid
+女の子の部屋	5	Girl's room
+大正浪漫	5	Taisho romantic
+ポリス	5	Police
+女神	5	Goddess
+犬	5	Dog
+魔女	5	Witch
+悪人	5	Villain
+クラシカル	5	Classical
+ステージ	5	Stage
+おもちゃ箱	5	Toy box
+闇	5	Darkness
+妹	5	Younger sister
+ロック	5	Rock
+パステル	5	Pastel
+海賊	4	Pirate
+夜	4	Night
+パンク	4	Punk
+洋館	4	Western mansion
+ミリタリー	4	Military
+女子大生	4	Female college student
+彼女	4	Girlfriend
+かっこいい	4	Cool
+競馬	4	Horse racing
+ゴースト	4	
+電脳	4	Cybernetic
+V系	4	Visual-kei
+貴族	4	Aristocrat
+童話	4	Fairly tale
+中二病	4	Chuunibyou
+和装	4	Japanese attire
+ぽっちゃり	3	Chubby
+声優	3	Voice actor
+宮殿	3	Palace
+幽霊	3	Ghost
+天空	3	Sky realm
+監獄	3	Prison
+ギルド	3	Guild
+麻雀	3	Mahjong
+RPG	3	RPG
+ジェンダーレス	3	Genderless
+素人	3	Amateur
+ライバー	3	Live streamer
+深海	3	Deep sea
+中世	3	Medieval
+容姿	3	Appearance
+特撮	3	Tokusatsu
+2.5次元	3	2.5D
+魔法学校	3	
+お屋敷	3	Mansion
+アットホーム	3	At-home atmosphere
+キョンシー	3	Jiangshi
+姫系	3	Princess style
+パンダ	3	Panda
+遊園地	3	Amusement park
+囚人	3	Prisoner
+ノーコンセプト	3	No concept
+キラキラ	3	Sparkling
+CA	3	Cabin attendant
+パーティ	3	Party
+未来	3	Future
+彼氏	3	Boyfriend
+ガンダム	3	Gundam
+BL	2	Boys' love
+鉄道	2	Railway
+水着	2	Swimwear
+機械	2	Machine
+ロングメイド	2	Long-skirt maid
+e-Sports	2	eSports
+ぬいぐるみ	2	Plush toy
+飛行機	2	Airplane
+ナイトメア	2	Nightmare
+魔法王国	2	Magic kingdom
+女児服	2	Girls' clothing
+星座	2	Zodiac
+ガールズバー	2	Girls bar
+ネオン	2	Neon
+仮面	2	Mask
+警察	2	
+花魁	2	Oiran
+あそび	2	Play
+お気に入り	2	Favorite
+ギャンブル	2	Gambling
+王族	2	Royalty
+使い魔	2	Familiar spirit
+羊	2	Sheep
+狼	2	Wolf
+南国	2	Tropical
+占い	2	Fortune-telling
+OL	2	Office Lady
+魔法学院	2	Magic academy
+洋風	2	Western style
+戦国	2	Sengoku period
+くらげ	2	Jellyfish
+香水	2	Perfume
+不良	2	Delinquent
+バーチャル	2	Virtual
+アバター	2	Avatar
+VTuber	2	Vtuber
+騒げる	2	Lively
+王宮	2	Royal court
+怪盗	2	Phantom thief
+ストリート	2	Street
+舞踏会	2	Ballroom
+機械人形	1	Mechanical doll
+アメコミ	1	American comic
+悪役令嬢	1	Villainess noble
+チョコレート	1	Chocolate
+お化け屋敷	1	Haunted house
+コミック	1	Comic
+映画	1	Film
+SF	1	Science fiction
+モンスター	1	Monster
+スパイ	1	Spy
+王国	1	Kingdom
+リゾート	1	Resort
+ウエスタン	1	Western
+女子寮	1	Girls' dormitory
+ジャンヌダルク	1	Joan of arc
+ネグリジェ	1	Negligee
+忍者	1	Ninja
+キャンディー	1	Candy
+ヴェイパーウェイブ	1	Vaporwave
+図書館	1	Library
+原宿系	1	Harajuku style
+ハードパンク	1	Hard punk
+黒薔薇	1	Black rose
+片想い	1	Unrequited love
+ギリシャ神殿	1	Greek temple
+後輩	1	Junior
+ダンサー	1	Dancer
+透明感	1	Transparency aesthetic
+バレンタインデー	1	Valentine's day
+クルマ	1	Car
+宇宙船	1	Spaceship
+殺し屋	1	Assassin
+チアガール	1	Cheerleader
+トレーニング	1	Training
+騎士	1	Knight
+ダンス	1	Dance
+マジック	1	Magic performance
+タレント	1	Talent
+怪談	1	Ghost story
+毒	1	Poison
+冬	1	Winter
+キャンプ	1	Camp
+オオカミ	1	
+プラモデル	1	Plastic model
+雪	1	Snow
+白猫	1	White cat
+遊び場	1	Playground
+シンデレラ	1	Cinderella
+日替わり	1	Daily theme
+天国	1	Heaven
+パジャマ	1	Pajamas
