@@ -31,6 +31,8 @@ This dataset contains original concept cafe data collected from Japanese concept
 【concept_frequency_with_english_labels.txt】
 <br>
 &nbsp;&nbsp;&nbsp;・
+<br>
 &nbsp;&nbsp;&nbsp;・
+<br>
 &nbsp;&nbsp;&nbsp;・
 <br>
