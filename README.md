@@ -1,5 +1,5 @@
 # ConCafe-Concept-Cooccurrence-Dataset
-This repository contains concept cafe data for analyzing concept co-occurrence networks, community structures, regional patterns, and popularity distributions.
+&nbsp;&nbsp;&nbsp;This repository contains concept cafe data for analyzing concept co-occurrence networks, community structures, regional patterns, and popularity distributions.
 <br>
 <br>
 【concept_cafe_dataset.txt】
