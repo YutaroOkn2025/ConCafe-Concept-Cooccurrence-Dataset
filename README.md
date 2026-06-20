@@ -43,16 +43,16 @@
 ・The whole network devided by the community detection:<p> 
 &nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/network_dividevByCommunities.html <p>
 ・・The Anime-Cosplay community:<p> 
-&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Anime-Cosplay_community.html <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Anime-Cosplay_community.html <p>
 ・・The Gothic-Dark community:<p> 
-&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Gothic-Dark_community.html <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Gothic-Dark_community.html <p>
 ・・The Idol-Kawaii community:<p> 
-&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Idol-Kawaii_community.html <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Idol-Kawaii_community.html <p>
 ・・The Maid community:<p> 
-&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Maid_community.html <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Maid_community.html <p>
 ・・The Music-Fashion community:<p> 
-&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Music-Fashion_community.html <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Music-Fashion_community.html <p>
 ・・The Prince community:<p> 
-&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Prince_community.html <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Prince_community.html <p>
 ・・The School-Student community:<p> 
-&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/School-Student_community.html <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/School-Student_community.html <p>
