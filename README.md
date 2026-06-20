@@ -39,4 +39,10 @@
 <br>
 
 ・The whole network devided by the community detection: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/network_dividevByCommunities.html <p>
-
+・・The Anime-Cosplay community: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Anime-Cosplay community.html <p>
+・・The Gothic-Dark community: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Gothic-Dark community.html <p>
+・・The Idol-Kawaii community: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Gothic-Dark community.html <p>
+・・The Maid community: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Maid community.html <p>
+・・The Music-Fashion community: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Music-Fashion community.html <p>
+・・The Prince community: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Prince community.html <p>
+・・The School-Student community: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/School-Student community.html <p>
