@@ -37,3 +37,6 @@
 <br>
 &nbsp;&nbsp;&nbsp;・concept_Eng：English label of the concept used for analysis and visualization (translated by the author)
 <br>
+
+・The whole network devided by the community detection: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/network_dividevByCommunities.html <p>
+
