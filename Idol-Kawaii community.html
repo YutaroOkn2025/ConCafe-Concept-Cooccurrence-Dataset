@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#e377c2", "id": "Princess", "label": "Princess", "physics": false, "shape": "dot", "size": 72.75172319452771, "title": "Princess\u003cbr\u003ecount:37", "x": -240.41976266314913, "y": -455.28914749881886}, {"color": "#e377c2", "id": "Beautiful girl", "label": "Beautiful girl", "physics": false, "shape": "dot", "size": 59.914645471079815, "title": "Beautiful girl\u003cbr\u003ecount:19", "x": -793.5238555213422, "y": 42.98072348580003}, {"color": "#e377c2", "id": "Night", "label": "Night", "physics": false, "shape": "dot", "size": 32.18875824868201, "title": "Night\u003cbr\u003ecount:4", "x": -1052.3251675336892, "y": -1101.1333874633478}, {"color": "#e377c2", "id": "Yume-kawaii", "label": "Yume-kawaii", "physics": false, "shape": "dot", "size": 46.05170185988092, "title": "Yume-kawaii\u003cbr\u003ecount:9", "x": -799.4843108504735, "y": -454.69258190097725}, {"color": "#e377c2", "id": "Pure", "label": "Pure", "physics": false, "shape": "dot", "size": 41.58883083359672, "title": "Pure\u003cbr\u003ecount:7", "x": -1416.8548521388261, "y": -157.0481081841039}, {"color": "#e377c2", "id": "Training-type", "label": "Training-type", "physics": false, "shape": "dot", "size": 46.05170185988092, "title": "Training-type\u003cbr\u003ecount:9", "x": -886.3434713193585, "y": 456.9201770593953}, {"color": "#e377c2", "id": "Idol", "label": "Idol", "physics": false, "shape": "dot", "size": 100.86850233838493, "title": "Idol\u003cbr\u003ecount:154", "x": -366.97797634939235, "y": 608.0121434241045}, {"color": "#e377c2", "id": "Jirai-kei fashion", "label": "Jirai-kei fashion", "physics": false, "shape": "dot", "size": 47.95790545596741, "title": "Jirai-kei fashion\u003cbr\u003ecount:10", "x": -560.8220618927357, "y": 2358.3059326228026}, {"color": "#e377c2", "id": "Witch", "label": "Witch", "physics": false, "shape": "dot", "size": 35.8351893845611, "title": "Witch\u003cbr\u003ecount:5", "x": -2418.8310583155308, "y": 240.37290424910918}, {"color": "#e377c2", "id": "Oningy\u014d (Doll)", "label": "Oningy\u014d (Doll)", "physics": false, "shape": "dot", "size": 51.29898714923073, "title": "Oningy\u014d (Doll)\u003cbr\u003ecount:12", "x": -1437.1893730519246, "y": 2040.9943147456152}, {"color": "#e377c2", "id": "Individualistic maid", "label": "Individualistic maid", "physics": false, "shape": "dot", "size": 38.91820298110626, "title": "Individualistic maid\u003cbr\u003ecount:6", "x": 372.72972433881097, "y": 919.9157302698933}, {"color": "#e377c2", "id": "High-class", "label": "High-class", "physics": false, "shape": "dot", "size": 38.91820298110626, "title": "High-class\u003cbr\u003ecount:6", "x": -71.79875628300826, "y": -670.1797297555909}, {"color": "#e377c2", "id": "Alice (in wonderland)", "label": "Alice (in wonderland)", "physics": false, "shape": "dot", "size": 59.914645471079815, "title": "Alice (in wonderland)\u003cbr\u003ecount:19", "x": 1017.5576594897099, "y": -438.3399230537083}, {"color": "#e377c2", "id": "Fairy", "label": "Fairy", "physics": false, "shape": "dot", "size": 68.02394763324311, "title": "Fairy\u003cbr\u003ecount:29", "x": 1721.1951358677543, "y": -3215.81878588152}, {"color": "#e377c2", "id": "Flower", "label": "Flower", "physics": false, "shape": "dot", "size": 41.58883083359672, "title": "Flower\u003cbr\u003ecount:7", "x": 1013.7629872278754, "y": -1680.9534041284003}, {"color": "#e377c2", "id": "Castle", "label": "Castle", "physics": false, "shape": "dot", "size": 38.91820298110626, "title": "Castle\u003cbr\u003ecount:6", "x": -629.764391388133, "y": -918.5055609196327}, {"color": "#e377c2", "id": "Extraordinary world", "label": "Extraordinary world", "physics": false, "shape": "dot", "size": 41.58883083359672, "title": "Extraordinary world\u003cbr\u003ecount:7", "x": 719.187973233881, "y": 948.1508943300103}, {"color": "#e377c2", "id": "Healing", "label": "Healing", "physics": false, "shape": "dot", "size": 47.95790545596741, "title": "Healing\u003cbr\u003ecount:10", "x": -466.77785319394826, "y": 101.30841729827985}, {"color": "#e377c2", "id": "Lolita", "label": "Lolita", "physics": false, "shape": "dot", "size": 38.91820298110626, "title": "Lolita\u003cbr\u003ecount:6", "x": -971.5523762541047, "y": 127.64321115103292}, {"color": "#e377c2", "id": "Stage", "label": "Stage", "physics": false, "shape": "dot", "size": 41.58883083359672, "title": "Stage\u003cbr\u003ecount:7", "x": -175.69376153269062, "y": 1300.1744323828188}, {"color": "#e377c2", "id": "Korean style", "label": "Korean style", "physics": false, "shape": "dot", "size": 52.78114659230518, "title": "Korean style\u003cbr\u003ecount:13", "x": -1007.3060075544007, "y": 2250.0263567541433}, {"color": "#e377c2", "id": "Kawaii", "label": "Kawaii", "physics": false, "shape": "dot", "size": 89.31816237309167, "title": "Kawaii\u003cbr\u003ecount:86", "x": 78.73770103070144, "y": -2.867237154507969}, {"color": "#e377c2", "id": "Subculture", "label": "Subculture", "physics": false, "shape": "dot", "size": 65.16193076042964, "title": "Subculture\u003cbr\u003ecount:25", "x": 34.994412930698715, "y": 599.6297418410596}, {"color": "#e377c2", "id": "Appearance ranking", "label": "Appearance ranking", "physics": false, "shape": "dot", "size": 52.78114659230518, "title": "Appearance ranking\u003cbr\u003ecount:13", "x": -170.61192017222, "y": 145.15105230062713}, {"color": "#e377c2", "id": "Magic", "label": "Magic", "physics": false, "shape": "dot", "size": 64.37751649736401, "title": "Magic\u003cbr\u003ecount:24", "x": -2417.0059664558994, "y": -86.05845234421949}, {"color": "#e377c2", "id": "Ghost", "label": "Ghost", "physics": false, "shape": "dot", "size": 32.18875824868201, "title": "Ghost\u003cbr\u003ecount:4", "x": -1261.7450476528036, "y": -1688.662692745013}, {"color": "#e377c2", "id": "Favorite", "label": "Favorite", "physics": false, "shape": "dot", "size": 21.97224577336219, "title": "Favorite\u003cbr\u003ecount:2", "x": -2277.756155544101, "y": -520.4832378192388}]);
+                  edges = new vis.DataSet([{"from": "Princess", "to": "Castle", "value": 5}, {"from": "Princess", "to": "Idol", "value": 8}, {"from": "Princess", "to": "High-class", "value": 3}, {"from": "Princess", "to": "Kawaii", "value": 7}, {"from": "Princess", "to": "Appearance ranking", "value": 4}, {"from": "Princess", "to": "Ghost", "value": 2}, {"from": "Princess", "to": "Lolita", "value": 2}, {"from": "Princess", "to": "Beautiful girl", "value": 2}, {"from": "Beautiful girl", "to": "Favorite", "value": 2}, {"from": "Beautiful girl", "to": "Kawaii", "value": 6}, {"from": "Beautiful girl", "to": "Yume-kawaii", "value": 2}, {"from": "Beautiful girl", "to": "Idol", "value": 4}, {"from": "Beautiful girl", "to": "Lolita", "value": 2}, {"from": "Beautiful girl", "to": "Pure", "value": 2}, {"from": "Beautiful girl", "to": "Healing", "value": 2}, {"from": "Beautiful girl", "to": "Magic", "value": 2}, {"from": "Beautiful girl", "to": "Training-type", "value": 2}, {"from": "Beautiful girl", "to": "Witch", "value": 2}, {"from": "Night", "to": "Kawaii", "value": 2}, {"from": "Pure", "to": "Kawaii", "value": 2}, {"from": "Training-type", "to": "Kawaii", "value": 3}, {"from": "Training-type", "to": "Idol", "value": 5}, {"from": "Idol", "to": "Oningy\u014d (Doll)", "value": 2}, {"from": "Idol", "to": "Kawaii", "value": 20}, {"from": "Idol", "to": "Korean style", "value": 2}, {"from": "Idol", "to": "Appearance ranking", "value": 6}, {"from": "Idol", "to": "Subculture", "value": 4}, {"from": "Idol", "to": "Healing", "value": 2}, {"from": "Idol", "to": "Jirai-kei fashion", "value": 2}, {"from": "Idol", "to": "Stage", "value": 5}, {"from": "Idol", "to": "Individualistic maid", "value": 2}, {"from": "Witch", "to": "Magic", "value": 2}, {"from": "Individualistic maid", "to": "Kawaii", "value": 3}, {"from": "Individualistic maid", "to": "Extraordinary world", "value": 2}, {"from": "High-class", "to": "Kawaii", "value": 3}, {"from": "Alice (in wonderland)", "to": "Kawaii", "value": 3}, {"from": "Fairy", "to": "Flower", "value": 2}, {"from": "Flower", "to": "Kawaii", "value": 3}, {"from": "Castle", "to": "Kawaii", "value": 2}, {"from": "Extraordinary world", "to": "Kawaii", "value": 3}, {"from": "Healing", "to": "Kawaii", "value": 5}, {"from": "Healing", "to": "Lolita", "value": 2}, {"from": "Lolita", "to": "Kawaii", "value": 2}, {"from": "Kawaii", "to": "Appearance ranking", "value": 7}, {"from": "Kawaii", "to": "Subculture", "value": 2}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"font": {"size": 100}}, "edges": {"smooth": false}, "physics": {"enabled": false, "solver": "forceAtlas2Based", "stabilization": {"enabled": true, "iterations": 3000}, "forceAtlas2Based": {"gravitationalConstant": -200, "centralGravity": 0.005, "springLength": 180, "springConstant": 0.05, "avoidOverlap": 3}, "minVelocity": 0.75}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
