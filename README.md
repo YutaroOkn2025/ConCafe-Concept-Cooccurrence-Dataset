@@ -38,6 +38,8 @@
 &nbsp;&nbsp;&nbsp;・concept_Eng：English label of the concept used for analysis and visualization (translated by the author)
 <br>
 
+【Developed network】
+<br>
 ・The whole network devided by the community detection: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/network_dividevByCommunities.html <p>
 ・・The Anime-Cosplay community: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Anime-Cosplay_community.html <p>
 ・・The Gothic-Dark community: https://yutarookn2025.github.io/ConCafe-Concept-Cooccurrence-Dataset/Gothic-Dark_community.html <p>
