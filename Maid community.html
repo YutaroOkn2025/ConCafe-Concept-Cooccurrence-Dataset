@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#d62728", "id": "Bear", "label": "Bear", "physics": false, "shape": "dot", "size": 41.58883083359672, "title": "Bear\u003cbr\u003ecount:7", "x": -2761.770639720175, "y": -1044.9171052795855}, {"color": "#d62728", "id": "Another world", "label": "Another world", "physics": false, "shape": "dot", "size": 68.02394763324311, "title": "Another world\u003cbr\u003ecount:29", "x": 674.705279575511, "y": -47.427048752363056}, {"color": "#d62728", "id": "Cat", "label": "Cat", "physics": false, "shape": "dot", "size": 76.13324979540639, "title": "Cat\u003cbr\u003ecount:44", "x": 1316.966865591311, "y": 207.9141007650936}, {"color": "#d62728", "id": "Star", "label": "Star", "physics": false, "shape": "dot", "size": 51.29898714923073, "title": "Star\u003cbr\u003ecount:12", "x": 1596.2328576915656, "y": 1013.2879135811897}, {"color": "#d62728", "id": "Sweets", "label": "Sweets", "physics": false, "shape": "dot", "size": 52.78114659230518, "title": "Sweets\u003cbr\u003ecount:13", "x": -1247.9737450881123, "y": -546.9291257177242}, {"color": "#d62728", "id": "Cat ears", "label": "Cat ears", "physics": false, "shape": "dot", "size": 63.56107660695891, "title": "Cat ears\u003cbr\u003ecount:23", "x": 565.5522190630596, "y": 438.85328905249673}, {"color": "#d62728", "id": "Rabbit", "label": "Rabbit", "physics": false, "shape": "dot", "size": 61.82084906716632, "title": "Rabbit\u003cbr\u003ecount:21", "x": 1306.2897235051373, "y": 850.8270521277619}, {"color": "#d62728", "id": "Bunny girl", "label": "Bunny girl", "physics": false, "shape": "dot", "size": 59.914645471079815, "title": "Bunny girl\u003cbr\u003ecount:19", "x": 1868.0474199700468, "y": 1728.59379387027}, {"color": "#d62728", "id": "Amateur", "label": "Amateur", "physics": false, "shape": "dot", "size": 27.725887222397812, "title": "Amateur\u003cbr\u003ecount:3", "x": 1838.1252403418719, "y": 444.79319870875935}, {"color": "#d62728", "id": "Maid", "label": "Maid", "physics": false, "shape": "dot", "size": 119.27158687236891, "title": "Maid\u003cbr\u003ecount:388", "x": 476.1389641746525, "y": 144.48163086611828}, {"color": "#d62728", "id": "Near future", "label": "Near future", "physics": false, "shape": "dot", "size": 41.58883083359672, "title": "Near future\u003cbr\u003ecount:7", "x": -3305.7590446544887, "y": 719.227755691229}, {"color": "#d62728", "id": "Neko (Cat)", "label": "Neko (Cat)", "physics": false, "shape": "dot", "size": 49.698132995760005, "title": "Neko (Cat)\u003cbr\u003ecount:11", "x": 294.3146482857536, "y": 687.155222687558}, {"color": "#d62728", "id": "Succubus", "label": "Succubus", "physics": false, "shape": "dot", "size": 56.66426688112432, "title": "Succubus\u003cbr\u003ecount:16", "x": 1800.2563537854974, "y": -1963.6132643075853}, {"color": "#d62728", "id": "Cyber", "label": "Cyber", "physics": false, "shape": "dot", "size": 58.888779583328805, "title": "Cyber\u003cbr\u003ecount:18", "x": -1746.619708884674, "y": 525.2750028722554}, {"color": "#d62728", "id": "Panda", "label": "Panda", "physics": false, "shape": "dot", "size": 27.725887222397812, "title": "Panda\u003cbr\u003ecount:3", "x": 1510.6591748641913, "y": 1547.1014626320452}, {"color": "#d62728", "id": "Orthodox style", "label": "Orthodox style", "physics": false, "shape": "dot", "size": 38.91820298110626, "title": "Orthodox style\u003cbr\u003ecount:6", "x": 1319.4821389601789, "y": -355.76221521122886}, {"color": "#d62728", "id": "Pirate", "label": "Pirate", "physics": false, "shape": "dot", "size": 32.18875824868201, "title": "Pirate\u003cbr\u003ecount:4", "x": 2255.472345972731, "y": 518.7593673089657}, {"color": "#d62728", "id": "Space", "label": "Space", "physics": false, "shape": "dot", "size": 46.05170185988092, "title": "Space\u003cbr\u003ecount:9", "x": 1803.1396264686844, "y": -360.5746597100139}, {"color": "#d62728", "id": "Girl\u0027s room", "label": "Girl\u0027s room", "physics": false, "shape": "dot", "size": 35.8351893845611, "title": "Girl\u0027s room\u003cbr\u003ecount:5", "x": 2251.6603335276714, "y": 22.127928376115065}, {"color": "#d62728", "id": "Shisha", "label": "Shisha", "physics": false, "shape": "dot", "size": 63.56107660695891, "title": "Shisha\u003cbr\u003ecount:23", "x": 1471.7128947662773, "y": -1044.7498093768595}, {"color": "#d62728", "id": "American style", "label": "American style", "physics": false, "shape": "dot", "size": 41.58883083359672, "title": "American style\u003cbr\u003ecount:7", "x": 2794.2780384696607, "y": 2954.615210645629}, {"color": "#d62728", "id": "Animal", "label": "Animal", "physics": false, "shape": "dot", "size": 58.888779583328805, "title": "Animal\u003cbr\u003ecount:18", "x": 876.698670428139, "y": 582.9764659061851}, {"color": "#d62728", "id": "Moon", "label": "Moon", "physics": false, "shape": "dot", "size": 38.91820298110626, "title": "Moon\u003cbr\u003ecount:6", "x": 2659.896928253912, "y": 1818.068982309452}, {"color": "#d62728", "id": "Magical girl", "label": "Magical girl", "physics": false, "shape": "dot", "size": 52.78114659230518, "title": "Magical girl\u003cbr\u003ecount:13", "x": 1084.4808548180886, "y": 363.95223651549554}, {"color": "#d62728", "id": "Pastel", "label": "Pastel", "physics": false, "shape": "dot", "size": 35.8351893845611, "title": "Pastel\u003cbr\u003ecount:5", "x": 2072.8147757524316, "y": 981.89323047263}, {"color": "#d62728", "id": "Cashino", "label": "Cashino", "physics": false, "shape": "dot", "size": 49.698132995760005, "title": "Cashino\u003cbr\u003ecount:11", "x": 1532.6074605433105, "y": 58.46213428239649}]);
+                  edges = new vis.DataSet([{"from": "Bear", "to": "Sweets", "value": 2}, {"from": "Another world", "to": "Rabbit", "value": 3}, {"from": "Another world", "to": "Maid", "value": 3}, {"from": "Cat", "to": "Cashino", "value": 2}, {"from": "Cat", "to": "Maid", "value": 7}, {"from": "Star", "to": "Rabbit", "value": 2}, {"from": "Star", "to": "Maid", "value": 3}, {"from": "Sweets", "to": "Maid", "value": 3}, {"from": "Cat ears", "to": "Neko (Cat)", "value": 2}, {"from": "Cat ears", "to": "Maid", "value": 12}, {"from": "Cat ears", "to": "Magical girl", "value": 5}, {"from": "Rabbit", "to": "Moon", "value": 2}, {"from": "Rabbit", "to": "Maid", "value": 3}, {"from": "Rabbit", "to": "Bunny girl", "value": 2}, {"from": "Bunny girl", "to": "American style", "value": 2}, {"from": "Bunny girl", "to": "Maid", "value": 2}, {"from": "Amateur", "to": "Maid", "value": 3}, {"from": "Maid", "to": "Neko (Cat)", "value": 2}, {"from": "Maid", "to": "Cashino", "value": 5}, {"from": "Maid", "to": "Cyber", "value": 2}, {"from": "Maid", "to": "Shisha", "value": 4}, {"from": "Maid", "to": "Pastel", "value": 2}, {"from": "Maid", "to": "Panda", "value": 2}, {"from": "Maid", "to": "Animal", "value": 5}, {"from": "Maid", "to": "Pirate", "value": 2}, {"from": "Maid", "to": "Space", "value": 3}, {"from": "Maid", "to": "Magical girl", "value": 6}, {"from": "Maid", "to": "Orthodox style", "value": 2}, {"from": "Maid", "to": "Girl\u0027s room", "value": 2}, {"from": "Near future", "to": "Cyber", "value": 2}, {"from": "Succubus", "to": "Shisha", "value": 5}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"font": {"size": 100}}, "edges": {"smooth": false}, "physics": {"enabled": false, "solver": "forceAtlas2Based", "stabilization": {"enabled": true, "iterations": 3000}, "forceAtlas2Based": {"gravitationalConstant": -200, "centralGravity": 0.005, "springLength": 180, "springConstant": 0.05, "avoidOverlap": 3}, "minVelocity": 0.75}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
