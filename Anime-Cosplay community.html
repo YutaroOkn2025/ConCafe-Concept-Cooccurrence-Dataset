@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 800px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#ff7f0e", "id": "Western mansion", "label": "Western mansion", "physics": false, "shape": "dot", "size": 32.18875824868201, "title": "Western mansion\u003cbr\u003ecount:4", "x": -482.8701913296579, "y": -4013.9433499616584}, {"color": "#ff7f0e", "id": "Dress-up doll", "label": "Dress-up doll", "physics": false, "shape": "dot", "size": 41.58883083359672, "title": "Dress-up doll\u003cbr\u003ecount:7", "x": -146.70997189676544, "y": -4062.6804196052185}, {"color": "#ff7f0e", "id": "Cosplayer", "label": "Cosplayer", "physics": false, "shape": "dot", "size": 47.95790545596741, "title": "Cosplayer\u003cbr\u003ecount:10", "x": -151.4943865373416, "y": -2513.3003506186533}, {"color": "#ff7f0e", "id": "Board game", "label": "Board game", "physics": false, "shape": "dot", "size": 51.29898714923073, "title": "Board game\u003cbr\u003ecount:12", "x": 430.7890830517044, "y": -1465.5539336806557}, {"color": "#ff7f0e", "id": "Cosplay", "label": "Cosplay", "physics": false, "shape": "dot", "size": 85.80918882296783, "title": "Cosplay\u003cbr\u003ecount:72", "x": 15.800565106229627, "y": -302.70915546191355}, {"color": "#ff7f0e", "id": "Otaku", "label": "Otaku", "physics": false, "shape": "dot", "size": 51.29898714923073, "title": "Otaku\u003cbr\u003ecount:12", "x": 413.209520447994, "y": -686.4251499030689}, {"color": "#ff7f0e", "id": "Anime song", "label": "Anime song", "physics": false, "shape": "dot", "size": 88.85302512980633, "title": "Anime song\u003cbr\u003ecount:84", "x": 403.54068931237697, "y": -228.12117100345327}, {"color": "#ff7f0e", "id": "Anime", "label": "Anime", "physics": false, "shape": "dot", "size": 74.75339236566737, "title": "Anime\u003cbr\u003ecount:41", "x": 211.67497220496696, "y": -970.3597388782249}, {"color": "#ff7f0e", "id": "Vocaloid", "label": "Vocaloid", "physics": false, "shape": "dot", "size": 47.95790545596741, "title": "Vocaloid\u003cbr\u003ecount:10", "x": 1158.7307054862245, "y": 642.1277902795163}, {"color": "#ff7f0e", "id": "Hideaway", "label": "Hideaway", "physics": false, "shape": "dot", "size": 51.29898714923073, "title": "Hideaway\u003cbr\u003ecount:12", "x": 644.8898247586676, "y": -496.0834401520137}, {"color": "#ff7f0e", "id": "Game", "label": "Game", "physics": false, "shape": "dot", "size": 57.807435157923294, "title": "Game\u003cbr\u003ecount:17", "x": 307.85784926571046, "y": -2031.2180124580482}]);
+                  edges = new vis.DataSet([{"from": "Western mansion", "to": "Cosplayer", "value": 2}, {"from": "Western mansion", "to": "Dress-up doll", "value": 2}, {"from": "Dress-up doll", "to": "Cosplayer", "value": 2}, {"from": "Cosplayer", "to": "Anime", "value": 2}, {"from": "Cosplayer", "to": "Cosplay", "value": 2}, {"from": "Board game", "to": "Otaku", "value": 2}, {"from": "Board game", "to": "Game", "value": 2}, {"from": "Cosplay", "to": "Anime song", "value": 12}, {"from": "Cosplay", "to": "Anime", "value": 6}, {"from": "Cosplay", "to": "Otaku", "value": 2}, {"from": "Cosplay", "to": "Hideaway", "value": 2}, {"from": "Otaku", "to": "Anime song", "value": 2}, {"from": "Otaku", "to": "Anime", "value": 4}, {"from": "Anime song", "to": "Vocaloid", "value": 4}, {"from": "Anime song", "to": "Anime", "value": 7}, {"from": "Anime song", "to": "Hideaway", "value": 2}, {"from": "Anime", "to": "Game", "value": 4}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"font": {"size": 100}}, "edges": {"smooth": false}, "physics": {"enabled": false, "solver": "forceAtlas2Based", "stabilization": {"enabled": true, "iterations": 3000}, "forceAtlas2Based": {"gravitationalConstant": -200, "centralGravity": 0.005, "springLength": 180, "springConstant": 0.05, "avoidOverlap": 3}, "minVelocity": 0.75}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
